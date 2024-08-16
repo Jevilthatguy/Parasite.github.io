@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG DATE</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .login-container {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            display: none; /* Verstecke das Textfeld zunächst */
+        }
+        .login-container input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .login-container input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 4px;
+            background-color: #444;
+            color: #fff;
+            cursor: pointer;
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #666;
+        }
+        .content {
+            display: none; /* Verstecke den Inhalt zunächst */
+        }
+        header {
+            background-color: #111;
+            padding: 20px;
+            font-size: 2em;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+        section {
+            padding: 50px;
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: left;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        footer {
+            background-color: #111;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 0.8em;
+            color: #444;
+        }
+        a {
+            color: #fff; /* Gleiche Farbe wie der normale Text */
+            text-decoration: none; /* Entfernt die Unterstreichung */
+        }
+        a:hover {
+            color: #ccc; /* Farbe beim Überfahren des Links */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container" id="loginContainer">
+        <h2>RESTRICTED</h2>
+        <form id="loginForm">
+            <input type="text" id="codeInput" placeholder="PASSWORD" required>
+            <input type="submit" value="SUBMIT">
+        </form>
+    </div>
+
+    <div class="content" id="content">
+        <header>
+            LOG DATA: PROFESSOR STEVENSON D. TYK
+        </header>
+        <section>
+            <p>Log Entry #001 – August 12, 1998<br><br>
+            The <a href="https://www.youtube.com/watch?v=s4a9XJbCqzA" title="Verborgene Bedrohung">parasite</a> sample arrived today. It was extracted from a mutilated insect found near the quarantine zone. The creature's movements were... unnatural, as if driven by something else. Initial observations suggest the <a href="https://www.youtube.com/watch?v=s4a9XJbCqzA" title="Verborgene Bedrohung">parasite</a> has completely overridden the host's will. I’ve never seen anything like this before.</p>
+            
+            <p>Log Entry #005 – August 14, 1998<br><br>
+            This is no ordinary <a href="https://www.youtube.com/watch?v=s4a9XJbCqzA" title="Verborgene Bedrohung">parasite</a>. It doesn't just kill; it puppeteers. The infected hosts seek out higher ground, exposing themselves to danger without hesitation. I dissected one of the specimens—its brain was riddled with tendrils. They seem almost... intelligent, as if they know what they're doing.</p>
+            
+            <p>Log Entry #011 – August 20, 1998<br><br>
+            The <a href="https://www.youtube.com/watch?v=s4a9XJbCqzA" title="Verborgene Bedrohung">parasite</a> emits chemical signals that hijack the host’s neural pathways, targeting fear and motor functions. The hosts aren't just mindless—they're trapped in their own bodies, fully aware of what's happening but powerless to stop it. I can’t shake the feeling that the <a href="https://www.youtube.com/watch?v=s4a9XJbCqzA" title="Verborgene Bedrohung">parasite</a> is watching me as I study it.</p>
+            
+            <p>Log Entry #018 – August 25, 1998<br><br>
+            The <a href="https://www.youtube.com/watch?v=s4a9XJbCqzA" title="Verborgene Bedrohung">parasite</a> is adapting. It has begun to infect mammals. We introduced it to a controlled group of lab rats—they tore each other apart within hours. This isn’t just parasitism. It’s something more sinister, something designed to spread chaos and destruction.</p>
+        </section>
+        <footer>
+            &copy; 1998 SANKOY LABS. DELAWARE.
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var loginContainer = document.getElementById('loginContainer');
+            var content = document.getElementById('content');
+            var loginForm = document.getElementById('loginForm');
+            var codeInput = document.getElementById('codeInput');
+
+            loginContainer.style.display = 'flex'; // Zeige das Login-Fenster an
+
+            loginForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Verhindere das Standard-Formular-Submit-Verhalten
+                var enteredCode = codeInput.value;
+                var correctCode = 'TM%888092557';
+
+                if (enteredCode === correctCode) {
+                    loginContainer.style.display = 'none'; // Verstecke das Login-Fenster
+                    content.style.display = 'block'; // Zeige den Inhalt
+                } else {
+                    alert('Falscher Code! Bitte versuche es erneut.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
